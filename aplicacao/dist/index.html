@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Consultando CEP com AJAX &amp; jQuery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="alert alert-danger cep-n-encontrado" role="alert">
+      Algo deu errado. O CEP está correto? Se sim, pode ser que haja algum
+      problema interno. Aguarde um momento até normalizar.
+    </div>
+
+    <div class="container">
+      <h1 class="text-center">Consultando CEP com AJAX & jQuery</h1>
+      <hr />
+      <form class="form-inline">
+        <!-- Form CEP -->
+        <div class="container">
+          <div class="form-group">
+            <label class="mr-2">CEP</label>
+            <input
+              class="form-control mr-2"
+              name="cep"
+              type="text"
+              placeholder="Apenas números"
+              maxlength="8"
+              autofocus
+            />
+            <button class="btn btn-outline-dark pesquisacep">Pesquisar</button>
+          </div>
+        </div>
+      </form>
+      <hr />
+      <form>
+        <!-- Form Endereço -->
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10">
+              <label>Endereço</label>
+              <input
+                class="form-control"
+                name="endereco"
+                type="text"
+                disabled
+              />
+            </div>
+            <div class="col-12 col-md-2">
+              <label>Numero</label>
+              <input class="form-control" name="numero" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <label>Bairro</label>
+              <input class="form-control" name="bairro" type="text" disabled />
+            </div>
+            <div class="col-12 col-md-6">
+              <label>Complemento</label>
+              <input class="form-control" name="complemento" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-9 col-md-10">
+              <label>Cidade</label>
+              <input class="form-control" name="cidade" type="text" disabled />
+            </div>
+            <div class="col-3 col-md-2">
+              <label>Estado</label>
+              <input class="form-control" name="estado" type="text" disabled />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <a
+      href="https://andrelaurentino.com.br"
+      target="_blank"
+      style="display: block; text-align: center"
+      >By: André Laurentino Rodrigues</a
+    >
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
